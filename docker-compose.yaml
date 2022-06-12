@@ -69,6 +69,7 @@ services:
       - mysql-database
     environment:
       LOGGING_LEVEL_ROOT: ERROR
+      WAIT_HOSTS: discovery:8761,config:8888
       EUREKA_SERVER: http://discovery:8761/eureka
       SPRING_PROFILES_ACTIVE: stage
       CONFIG_SERVER: http://config:8888/
